@@ -1,0 +1,19 @@
+.navbar{
+    background-color: black;
+    color: white;
+}
+.navbar .nav-link {
+    color: white !important; /* Change the navbar link text color */
+  }
+
+.navbar .navbar-brand{
+    color: white;
+}
+.navbar .btn{
+    color: aliceblue;
+    border-color: white;
+}
+
+.navbar .btn:hover{
+    background-color: gray;
+}

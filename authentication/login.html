@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixStock</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Center the form vertically and horizontally */
+
+        body,
+        html {
+            height: 100%;
+        }
+
+
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Style for the form */
+        .login-container form {
+            background-color: black;
+            color: white;
+        }
+
+        /* Style for white text inputs */
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Move the checkbox to the right */
+        .form-check {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black px-3">
+        <div class="container-fluid p-0">
+
+            <a class="navbar-brand fw-bold" href="#">PixStock</a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"><a class="nav-link active" href="../Index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Html/img.html">Images</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Html/icon.html">Icons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Html/vedio.html">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Html/psd.html">PSD</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Html/eps.html">EPS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Html/ai.html">AI</a></li>
+                </ul>
+
+                <div class="d-flex gap-2 justify-content-center">
+                    <a href="./authentication/login.html" class="btn btn-outline-light btn-sm">Login</a>
+                    <a href="/authentication/registration.html" class="btn btn-outline-light btn-sm">Sign Up</a>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <form class="border p-4 rounded shadow" style="width: 400px;">
+            <h3 class="text-center mb-4">Login</h3>
+
+            <!-- Email input -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+
+            <!-- Password input -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+
+            <!-- Checkbox to show/hide password (right-aligned) -->
+            <div class="form-check mb-3">
+                <label class="form-check-label" for="showPassword">Show
+                    Password</label>
+                <input class="form-check-input ms-2" type="checkbox" id="showPassword">
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (for optional functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('showPassword').addEventListener('change', function () {
+            var passwordInput = document.getElementById('password');
+            if (this.checked) {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        });
+    </script>

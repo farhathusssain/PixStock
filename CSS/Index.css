@@ -1,0 +1,364 @@
+ body {
+      overflow-x: hidden;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .hero-search {
+      max-width: 700px;
+      margin: auto;
+    }
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    .overlay-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .overlay-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,.5);
+    }
+    .overlay-text {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+
+.picture {
+  background-image: url('../Assets/Images/adam-kool-ndN00KmbJ1c-unsplash.jpg');
+  /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  /* Full height */
+  position: relative;
+}
+
+
+/* Feature Card */
+.feature-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(108, 92, 231, 0.25);
+}
+
+/* Image Wrapper */
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 210px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.feature-card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+/* Image Gradient Overlay */
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+    to bottom,
+    rgba(108, 92, 231, 0.15),
+    rgba(0, 206, 201, 0.35)
+  ); */
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+
+ /* idea card coding */
+
+/* Badge */
+.feature-badge {
+  background: linear-gradient(135deg, #6C5CE7, #00CEC9);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.card-img-top {
+  position: relative;
+}
+
+.feature-card img {
+  filter: brightness(0.95);
+}
+
+.feature-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(108, 92, 231, 0.2);
+  pointer-events: none;
+}
+
+
+
+/* Marquee */
+
+.overlay-content {
+  color: white;
+  text-align: center;
+}
+
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  ;
+}
+
+/* Right to Left Marquee */
+.marquee-left {
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* Left to Right Marquee */
+.marquee-right {
+  display: flex;
+  animation: scroll-right 20s linear infinite;
+}
+
+/* Image Styles */
+/* .marquee img {
+  width: 240px;
+  height: 240px;
+  margin-right: 20px;
+} */
+ /* Responsive Images */
+.marquee img {
+  margin: 10px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.marquee img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Right to Left Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Left to Right Animation */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+/* Stats Section */
+.stats-section {
+  /* background: linear-gradient(135deg, #0F172A, #1E293B); Dark modern gradient */
+  color: #fff;
+  padding: 4rem 1rem;
+  border-radius: 16px;
+}
+
+/* Cards */
+.card-stats {
+  background: linear-gradient(135deg, #6C5CE7, #00CEC9); 
+  border: none;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-stats:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+/* Counter Number */
+.card-stats .counter {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Card Text */
+.card-stats .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .card-stats .counter {
+    font-size: 2rem;
+  }
+  .card-stats .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-stats .counter {
+    font-size: 1.6rem;
+  }
+  .card-stats .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+
+.banner{
+  width: 100%;
+  height:75vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  /* background-color: gray; */
+}
+
+.banner .slider{
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+}
+
+@keyframes autoRun{
+  from{
+    transform: perspective(1000px) rotateY(0deg);
+
+  }to{
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.banner .slider .item{
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: 
+  rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+  translateZ(550px);
+}
+
+.banner .slider .item img{
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+
+}
+
+.footer-section {
+  background-color: #0f172a; /* Dark modern background */
+  color: #fff;
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-list li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #6c5ce7; /* Accent color on hover */
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-heading {
+    font-size: 1.1rem;
+  }
+  .footer-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-heading {
+    font-size: 1rem;
+  }
+  .footer-link {
+    font-size: 0.9rem;
+  }
+}
+
+
